@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="42">
+    <author>LsModcompany / kevink98</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en><![CDATA[Fermentingsilo]]></en>
+        <de><![CDATA[Hochsilo]]></de>
+    </title>
+    <description>
+        <en><![CDATA[Fermentingsilo]]></en>
+        <de><![CDATA[Hochsilo]]></de>
+    </description>
+    <iconFilename>store_fermentingSiloSmall.dds</iconFilename>
+    <multiplayer supported="true" />
+
+    <storeItems>
+        <storeItem xmlFilename="fermentingSiloSmall.xml" />
+    </storeItems>
+	
+    <brands>
+        <brand name="GCPLACEABLE" title="GlobalCompany Placeable" image="brand_placeable.dds"/>
+    </brands>
+</modDesc>

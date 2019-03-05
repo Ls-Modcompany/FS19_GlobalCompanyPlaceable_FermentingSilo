@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+    <elements>
+
+    <e k="category_gcFermentingSilo" v="Hochsilo"/>
+    <e k="function_gcFermentingSilo" v="In Hochsilos kann Silage hergestellt werden."/>
+    <e k="shopItem_fermentingSiloSmall" v="Hochsilo klein"/>
+    </elements>
+</l10n>
