@@ -13,11 +13,18 @@
     <iconFilename>store_fermentingSiloSmall.dds</iconFilename>
     <multiplayer supported="true" />
 
+	<globalCompany minimumVersion="1.0.0.0" />
+
     <storeItems>
         <storeItem xmlFilename="fermentingSiloSmall.xml" />
     </storeItems>
 	
+	<extraSourceFiles>
+		<sourceFile filename="GC_Checker.lua" /> <!-- Make sure we have GC Active -->
+    </extraSourceFiles>
+
+    
     <brands>
-        <brand name="GCPLACEABLE" title="GlobalCompany Placeable" image="brand_placeable.dds"/>
+        <brand name="GCPLACEABLE" title="GlobalCompany Placeable" image="../FS19_GlobalCompany/brand_placeable.dds"/>
     </brands>
 </modDesc>

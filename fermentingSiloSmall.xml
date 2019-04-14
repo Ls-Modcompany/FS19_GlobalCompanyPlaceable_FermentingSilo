@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <placeable>
     <storeData>
-        <name>$l10n_shopItem_fermentingSiloSmall</name>
+        <name>$l10n_GlobalCompanyPlaceable_FermentingSilo_shopItem_fermentingSiloSmall</name>
         <functions>
-            <function>$l10n_function_gcFermentingSilo</function>
+            <function>$l10n_GlobalCompanyPlaceable_FermentingSilo_function_gcFermentingSilo</function>
         </functions>
         <specs>
             <capacity>100000</capacity>
@@ -12,11 +12,11 @@
         <image>store_fermentingSiloSmall.dds</image>
         <price>110000</price>
         <lifetime>1000</lifetime>
-        <dailyUpkeep>45</dailyUpkeep>
+        <dailyUpkeep>100</dailyUpkeep>
         <rotation>0</rotation>
         <brand>GCPLACEABLE</brand>
         <species>placeable</species>
-        <category>silos</category>
+        <category>globalCompanyPlaceable</category>
         <vertexBufferMemoryUsage>180404</vertexBufferMemoryUsage>
         <indexBufferMemoryUsage>32964</indexBufferMemoryUsage>
         <textureMemoryUsage>5680200</textureMemoryUsage>
@@ -29,9 +29,25 @@
     <placement testSizeX="27" testSizeZ="20" sizeX="27" sizeZ="20" useRandomYRotation="false" useManualYRotation="true" />
 
     <productionFactories>
-        <productionFactory indexName="fermenterSmall" saveId="fermenter_small">
-            <registerInputProducts>
-                <inputProduct name="input01" capacity="100000" title="grassChaffTitle">
+        <productionFactory indexName="FERMENTERSMALL" saveId="globalCompany_fermenter_small">
+            <guiInformation title="GlobalCompanyPlaceable_FermentingSilo_FactoryName" imageFilename="store_fermentingSiloSmall.dds" description="GlobalCompanyPlaceable_FermentingSilo_Description"/>
+			
+            <operation updateDelayMinutes="10" showInGlobalGUI="true" showInTablet="true" canPurchaseInputs="true"/>
+			
+            <registerLoadingTriggers>
+				<loadingTrigger name="LoadingTrigger" triggerNode="loadingTrigger" fillLitersPerSecond="500" autoStart="false">
+					<dischargeInfo dischargeNode="dischargeNode" />
+					<sounds fillSoundIdentifier="fillSound01" />
+					<effectNode effectNode="pipeEffect" materialType="unloading" materialTypeId="3" fadeTime="0.5" />
+
+					<triggerStatus>
+						<fallOffShader node="mapTargetMarker" />
+					</triggerStatus>
+				</loadingTrigger>
+			</registerLoadingTriggers>
+
+            <registerInputProducts headerTitle="GlobalCompanyPlaceable_FermentingSilo_HeaderInput">
+                <inputProduct name="IP_CHAFFGRASS" capacity="100000" title="GlobalCompanyPlaceable_FermentingSilo_Input1">
                     <fillTypes>
                         <fillType name="chaff" />
                         <fillType name="grass" />
@@ -41,71 +57,62 @@
                     </inputMethods>
                 </inputProduct>	
             </registerInputProducts>
-            <registerOutputProducts>				
-                <outputProduct name="output01" capacity="100000" title="silage">
-                    <fillTypes>
-                        <fillType name="silage" />
-                    </fillTypes>	
+
+            <registerOutputProducts headerTitle="GlobalCompanyPlaceable_FermentingSilo_HeaderOutput">				
+                <outputProduct name="OP_SILAGE" fillType="silage" capacity="100000" title="GlobalCompanyPlaceable_FermentingSilo_Output1">
                     <outputMethods>
-                        <unloadTrigger exactFillRootNode="exactFillRootNode2" />
-                    </outputMethods>
+						<loadingTrigger name="LoadingTrigger" />
+					</outputMethods>
                 </outputProduct>
             </registerOutputProducts>	
+
             <productLines>
-                <productLine autoLineStart="true">
+                <productLine autoLineStart="true" outputPerHour="3000">
                     <inputs>
-                        <inputProduct name="input01" />
+                        <inputProduct name="IP_CHAFFGRASS" />
                     </inputs>
                     <outputs>
-                        <outputProduct name="output01" />
+                        <outputProduct name="OP_SILAGE" />
                     </outputs>
-                </productLine>
+                    <playerTrigger playerTriggerNode="playerTrigger" drawUI="false"/> 
+	            </productLine>
             </productLines>
-            
-            <playerTrigger playerTriggerNode="playerTrigger" />				
+            			
         
             <i3dMappings>
                 <i3dMapping id="exactFillRootNode" node="0|0|0|0|0" />
-                <i3dMapping id="exactFillRootNode2" node="0|1|0|1|0|0" />
+                
                 <i3dMapping id="playerTrigger" node="0|4" />
+                <i3dMapping id="loadingTrigger" node="0|1|0|0|0" />
+                <i3dMapping id="dischargeNode" node="0|1|0|0|1" />
+                <i3dMapping id="pipeEffect" node="0|1|0|0|2|0" />
+                <i3dMapping id="mapTargetMarker" node="0|1|0|0|3" />
             </i3dMappings>
         </productionFactory>
     </productionFactories>
     
 	
 	
+    <triggerMarkers>
+        <triggerMarker node="5" />
+    </triggerMarkers>
 	
-	
-	<!--
-    <loadingStation stationName="$l10n_station_farmSilo" appearsOnPDA="false" storageRadius="50" fillSoundIdentifier="fillSound01">
-        <loadTrigger triggerNode="0|1|0|0|0" fillLitersPerSecond="2000" dischargeNode="0|1|0|0|1">
-            <effectNode effectClass="PipeEffect" effectNode="0|1|0|0|2|0" materialType="pipe" materialTypeId="1" fadeTime="0.5" maxBending="0" controlPoint="3.75 0 0 0"/>
-            <effectNode                          effectNode="0|1|0|0|2|1" materialType="smoke"     materialTypeId="1" fadeTime="0.5" />
-        </loadTrigger>
-    </loadingStation>
-
-    <unloadingStation stationName="$l10n_station_farmSilo" appearsOnPDA="false" storageRadius="50">
-        <unloadTrigger exactFillRootNode="0|0|0|0|0" />
-    </unloadingStation>
-
-    <storages>
-        <storage node="0|2" fillTypes="wheat barley canola maize oat sunflower soybean" capacityPerFillType="100000" />
-    </storages>
-
     <clearAreas>
         <clearArea startNode="3|0" widthNode="3|0|0" heightNode="3|0|1"/>
     </clearAreas>
-
-    <hotspots>
-        <hotspot name="Farm silo" fullName="$l10n_station_farmSilo" imageName="SELLING_POINT" hidable="true" linkNode="0|3" category="CATEGORY_TRIGGERS" />
-    </hotspots>
-
+	
     <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="75" maxEdgeAngle="30">
         <levelAreas>
             <levelArea startNode="3|0" widthNode="3|0|0" heightNode="3|0|1" groundType="asphalt"/>
         </levelAreas>
     </leveling>
+
+    <tipOcclusionUpdateArea sizeX="25" sizeZ="20" />
+	<!--
+    <hotspots>
+        <hotspot name="Farm silo" fullName="$l10n_station_farmSilo" imageName="SELLING_POINT" hidable="true" linkNode="0|3" category="CATEGORY_TRIGGERS" />
+    </hotspots>
+
     
-    <tipOcclusionUpdateArea sizeX="25" sizeZ="25" />
 	-->
 </placeable>
