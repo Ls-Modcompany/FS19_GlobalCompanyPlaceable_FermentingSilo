@@ -35,16 +35,26 @@
             <operation updateDelayMinutes="10" showInGlobalGUI="true" showInTablet="true" canPurchaseInputs="true"/>
 			
             <registerLoadingTriggers>
-				<loadingTrigger name="LoadingTrigger" triggerNode="loadingTrigger" fillLitersPerSecond="500" autoStart="false">
+				<loadingTrigger name="LoadingTrigger" triggerNode="loadingTrigger" fillLitersPerSecond="500" autoStart="true"> <!-- If it is a single product we can use 'autoStart' as there is noting to chose from! This will chose the first available fillType. -->
 					<dischargeInfo dischargeNode="dischargeNode" />
 					<sounds fillSoundIdentifier="fillSound01" />
+					
 					<effectNode effectNode="pipeEffect" materialType="unloading" materialTypeId="3" fadeTime="0.5" />
+					<effectNode effectNode="smokeEffect" materialType="smoke"     materialTypeId="1" fadeTime="0.5" />
 
 					<triggerStatus>
-						<fallOffShader node="mapTargetMarker" />
+						<fallOffShader node="mapTargetMarker" >
+							<noObject isActive="true" />
+							<foundObject isActive="true" />
+							<fillingActive isActive="false" />
+						</fallOffShader>
 					</triggerStatus>
 				</loadingTrigger>
 			</registerLoadingTriggers>
+			
+			<registerUnloadingTriggers>
+				<unloadingTrigger name="UnloadingTrigger_1" exactFillRootNode="exactFillRootNode" />
+			</registerUnloadingTriggers>
 
             <registerInputProducts headerTitle="GlobalCompanyPlaceable_FermentingSilo_HeaderInput">
                 <inputProduct name="IP_CHAFFGRASS" capacity="100000" title="GlobalCompanyPlaceable_FermentingSilo_Input1">
@@ -53,7 +63,7 @@
                         <fillType name="grass" />
                     </fillTypes>
                     <inputMethods>
-                        <unloadTrigger exactFillRootNode="exactFillRootNode" />
+                        <unloadingTrigger name="UnloadingTrigger_1" />
                     </inputMethods>
                 </inputProduct>	
             </registerInputProducts>
@@ -86,6 +96,7 @@
                 <i3dMapping id="loadingTrigger" node="0|1|0|0|0" />
                 <i3dMapping id="dischargeNode" node="0|1|0|0|1" />
                 <i3dMapping id="pipeEffect" node="0|1|0|0|2|0" />
+				<i3dMapping id="smokeEffect" node="0|1|0|0|2|1"/>
                 <i3dMapping id="mapTargetMarker" node="0|1|0|0|3" />
             </i3dMappings>
         </productionFactory>
