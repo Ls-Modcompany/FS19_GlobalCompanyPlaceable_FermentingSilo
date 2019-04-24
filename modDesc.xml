@@ -27,4 +27,10 @@
     <brands>
         <brand name="GCPLACEABLE" title="GlobalCompany Placeable" image="../FS19_GlobalCompany/brand_placeable.dds"/>
     </brands>
+	
+	<extraSourceFiles>
+		<sourceFile filename="scripts/GC_Checker.lua" />
+    </extraSourceFiles>
+	
+	<globalCompany minimumVersion="1.0.0.0" />
 </modDesc>
