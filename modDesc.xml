@@ -13,8 +13,6 @@
     <iconFilename>store_fermentingSiloSmall.dds</iconFilename>
     <multiplayer supported="true" />
 
-	<globalCompany minimumVersion="1.0.0.0" />
-
     <storeItems>
         <storeItem xmlFilename="fermentingSilo.xml" />
     </storeItems>
