@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="42">
-    <author>LsModcompany / kevink98</author>
+    <author>LsModcompany / Kastor - kevink98 - Eribus</author>
     <version>1.0.0.0</version>
     <title>
         <en><![CDATA[Fermentingsilo]]></en>
@@ -16,20 +16,19 @@
 	<globalCompany minimumVersion="1.0.0.0" />
 
     <storeItems>
-        <storeItem xmlFilename="fermentingSiloSmall.xml" />
+        <storeItem xmlFilename="fermentingSilo.xml" />
     </storeItems>
 	
 	<extraSourceFiles>
-		<sourceFile filename="GC_Checker.lua" /> <!-- Make sure we have GC Active -->
+		<sourceFile filename="GC_Checker.lua" />
     </extraSourceFiles>
-
     
     <brands>
         <brand name="GCPLACEABLE" title="GlobalCompany Placeable" image="../FS19_GlobalCompany/brand_placeable.dds"/>
     </brands>
 	
 	<extraSourceFiles>
-		<sourceFile filename="scripts/GC_Checker.lua" />
+		<sourceFile filename="GC_Checker.lua" />
     </extraSourceFiles>
 	
 	<globalCompany minimumVersion="1.0.0.0" />

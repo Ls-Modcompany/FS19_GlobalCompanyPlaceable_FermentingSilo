@@ -25,29 +25,29 @@
     </storeData>
 
     <placeableType>GC_ProductionFactoryPlaceable</placeableType>
-    <filename>fermentingSiloSmall.i3d</filename>
+    <filename>fermentingSilo.i3d</filename>
     <placement testSizeX="27" testSizeZ="20" sizeX="27" sizeZ="20" useRandomYRotation="false" useManualYRotation="true" />
 
     <productionFactories>
-        <productionFactory indexName="FERMENTERSMALL" saveId="globalCompany_fermenter_small">
-            <guiInformation title="GlobalCompanyPlaceable_FermentingSilo_FactoryName" imageFilename="store_fermentingSiloSmall.dds" description="GlobalCompanyPlaceable_FermentingSilo_Description"/>
+        <productionFactory indexName="FERMENTER" saveId="globalCompany_fermenter">
+            <guiInformation title="GlobalCompanyPlaceable_FermentingSilo_FactoryName" imageFilename="store_fermentingSilo.dds" description="GlobalCompanyPlaceable_FermentingSilo_Description"/>
 			
             <operation updateDelayMinutes="10" showInGlobalGUI="true" showInTablet="true" canPurchaseInputs="true"/>
 			
             <registerLoadingTriggers>
-				<loadingTrigger name="LoadingTrigger" triggerNode="loadingTrigger" fillLitersPerSecond="500" autoStart="true"> <!-- If it is a single product we can use 'autoStart' as there is noting to chose from! This will chose the first available fillType. -->
+				<loadingTrigger name="LoadingTrigger" triggerNode="loadingTrigger" fillLitersPerSecond="500" autoStart="true">
 					<dischargeInfo dischargeNode="dischargeNode" />
 					<sounds fillSoundIdentifier="fillSound01" />
 					
-					<effectNode effectNode="pipeEffect" materialType="unloading" materialTypeId="3" fadeTime="0.5" />
-					<effectNode effectNode="smokeEffect" materialType="smoke"     materialTypeId="1" fadeTime="0.5" />
+					<effectNode effectNode="grain" materialType="unloading" materialTypeId="3" fadeTime="0.5" />
+					<effectNode effectNode="smoke" materialType="smoke"    materialTypeId="1" fadeTime="0.5" />
 
 					<triggerStatus>
-						<fallOffShader node="mapTargetMarker" >
+						<!--fallOffShader node="mapTargetMarker" >
 							<noObject isActive="true" />
 							<foundObject isActive="true" />
 							<fillingActive isActive="false" />
-						</fallOffShader>
+						</fallOffShader-->
 					</triggerStatus>
 				</loadingTrigger>
 			</registerLoadingTriggers>
@@ -60,11 +60,19 @@
                 <inputProduct name="IP_CHAFFGRASS" capacity="100000" title="GlobalCompanyPlaceable_FermentingSilo_Input1">
                     <fillTypes>
                         <fillType name="chaff" />
-                        <fillType name="grass" />
+                        <fillType name="grass_windrow" />
                     </fillTypes>
                     <inputMethods>
                         <unloadingTrigger name="UnloadingTrigger_1" />
-                    </inputMethods>
+                    </inputMethods>	
+					<movers>
+						<mover node="plane">
+							<translation minimum="-4.16599989 -0.82107896 -2.4690001" maximum="-4.16599989 0.45186058 -2.4690001" />
+						</mover>
+					</movers>		
+					<digitalDisplays>
+						<display displayType="LEVEL" numbers="IN_Display" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
+					</digitalDisplays>
                 </inputProduct>	
             </registerInputProducts>
 
@@ -73,6 +81,9 @@
                     <outputMethods>
 						<loadingTrigger name="LoadingTrigger" />
 					</outputMethods>
+					<digitalDisplays>
+						<display displayType="LEVEL" numbers="OP_Display" emptyNumberColor="0 1 0 1" numberColor="1 1 0 1" fullNumberColor="1 0 0 1"/>
+					</digitalDisplays>
                 </outputProduct>
             </registerOutputProducts>	
 
@@ -86,24 +97,22 @@
                     </outputs>
                     <playerTrigger playerTriggerNode="playerTrigger" drawUI="false"/> 
 	            </productLine>
-            </productLines>
-            			
+            </productLines>            			
         
             <i3dMappings>
-                <i3dMapping id="exactFillRootNode" node="0|0|0|0|0" />
-                
-                <i3dMapping id="playerTrigger" node="0|4" />
-                <i3dMapping id="loadingTrigger" node="0|1|0|0|0" />
-                <i3dMapping id="dischargeNode" node="0|1|0|0|1" />
-                <i3dMapping id="pipeEffect" node="0|1|0|0|2|0" />
-				<i3dMapping id="smokeEffect" node="0|1|0|0|2|1"/>
-                <i3dMapping id="mapTargetMarker" node="0|1|0|0|3" />
+                <i3dMapping id="dischargeNode" node="1|0|0|1" />
+                <i3dMapping id="smoke" node="1|0|0|2|1" />
+                <i3dMapping id="grain" node="1|0|0|2|0" />
+                <i3dMapping id="loadingTrigger" node="1|0|0|0" />
+                <i3dMapping id="exactFillRootNode" node="0|0|0|0" />
+                <i3dMapping id="IN_Display" node="0|1" />
+                <i3dMapping id="plane" node="0|2" />
+                <i3dMapping id="OP_Display" node="1|1" />
+                <i3dMapping id="playerTrigger" node="2" />
             </i3dMappings>
         </productionFactory>
     </productionFactories>
-    
-	
-	
+    	
     <triggerMarkers>
         <triggerMarker node="5" />
     </triggerMarkers>
@@ -119,11 +128,4 @@
     </leveling>
 
     <tipOcclusionUpdateArea sizeX="25" sizeZ="20" />
-	<!--
-    <hotspots>
-        <hotspot name="Farm silo" fullName="$l10n_station_farmSilo" imageName="SELLING_POINT" hidable="true" linkNode="0|3" category="CATEGORY_TRIGGERS" />
-    </hotspots>
-
-    
-	-->
 </placeable>
