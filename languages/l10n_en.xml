@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <l10n>
     <elements>
-    <e k="GlobalCompanyPlaceable_FermentingSilo_function_gcFermentingSilo" v="In Hochsilos kann Silage hergestellt werden."/>
-    <e k="GlobalCompanyPlaceable_FermentingSilo_shopItem_fermentingSiloSmall" v="kleines Hochsilo"/>
-
-    <e k="GlobalCompanyPlaceable_FermentingSilo_FactoryName" v="Hochsilo"/>
-    <e k="GlobalCompanyPlaceable_FermentingSilo_Description" v="In Hochsilos kann Silage hergestellt werden."/>
-    <e k="GlobalCompanyPlaceable_FermentingSilo_HeaderInput" v="Schüttgüter"/>
-    <e k="GlobalCompanyPlaceable_FermentingSilo_Input1" v="Häckselgut/Gras"/>
-    <e k="GlobalCompanyPlaceable_FermentingSilo_HeaderOutput" v="Herstellung"/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_function_gcFermentingSilo" v="In fermentingsilo you can produce silage."/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_shopItem_fermentingSiloSmall" v="Fermentingsilo"/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_FactoryName" v="Fermentingsilo"/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_Description" v="In fermentingsilo you can produce silage."/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_HeaderInput" v="Bulk materials"/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_Input1" v="Chaff/Grass"/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_HeaderOutput" v="Production"/>
     <e k="GlobalCompanyPlaceable_FermentingSilo_Output1" v="Silage"/>
-
-
     </elements>
 </l10n>

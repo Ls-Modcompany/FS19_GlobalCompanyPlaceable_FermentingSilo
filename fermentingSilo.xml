@@ -88,7 +88,7 @@
             </registerOutputProducts>	
 
             <productLines>
-                <productLine autoLineStart="true" outputPerHour="3000">
+                <productLine autoLineStart="true" outputPerHour="3000" title="GlobalCompanyPlaceable_FermentingSilo_shopItem_fermentingSiloSmall">
                     <inputs>
                         <inputProduct name="IP_CHAFFGRASS" />
                     </inputs>

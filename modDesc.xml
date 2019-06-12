@@ -7,8 +7,18 @@
         <de><![CDATA[Hochsilo]]></de>
     </title>
     <description>
-        <en><![CDATA[Fermentingsilo]]></en>
-        <de><![CDATA[Hochsilo]]></de>
+        <en><![CDATA[In fermentingsilo you can produce silage.
+
+Production / Hour: 3.000 Liter
+
+Required Inputs: Grass, Chaff
+Output: Silage]]></en>
+        <de><![CDATA[In Hochsilos kann Silage hergestellt werden.
+
+Produktion / Stunde: 3.000 Liter
+
+Benötigte Rohstoffe: Gras, Häckselgut
+Produkt: Silage]]></de>
     </description>
     <iconFilename>store_fermentingSiloSmall.dds</iconFilename>
     <multiplayer supported="true" />

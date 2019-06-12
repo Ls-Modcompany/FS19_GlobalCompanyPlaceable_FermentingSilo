@@ -2,15 +2,12 @@
 <l10n>
     <elements>
     <e k="GlobalCompanyPlaceable_FermentingSilo_function_gcFermentingSilo" v="In Hochsilos kann Silage hergestellt werden."/>
-    <e k="GlobalCompanyPlaceable_FermentingSilo_shopItem_fermentingSiloSmall" v="kleines Hochsilo"/>
-
+    <e k="GlobalCompanyPlaceable_FermentingSilo_shopItem_fermentingSiloSmall" v="Hochsilo"/>
     <e k="GlobalCompanyPlaceable_FermentingSilo_FactoryName" v="Hochsilo"/>
     <e k="GlobalCompanyPlaceable_FermentingSilo_Description" v="In Hochsilos kann Silage hergestellt werden."/>
     <e k="GlobalCompanyPlaceable_FermentingSilo_HeaderInput" v="Schüttgüter"/>
     <e k="GlobalCompanyPlaceable_FermentingSilo_Input1" v="Häckselgut/Gras"/>
     <e k="GlobalCompanyPlaceable_FermentingSilo_HeaderOutput" v="Herstellung"/>
     <e k="GlobalCompanyPlaceable_FermentingSilo_Output1" v="Silage"/>
-
-
     </elements>
 </l10n>
