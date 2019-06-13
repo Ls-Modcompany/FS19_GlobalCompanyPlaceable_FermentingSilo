@@ -20,7 +20,7 @@ Produktion / Stunde: 3.000 Liter
 Benötigte Rohstoffe: Gras, Häckselgut
 Produkt: Silage]]></de>
     </description>
-    <iconFilename>store_fermentingSiloSmall.dds</iconFilename>
+    <iconFilename>store_Fermenter.dds</iconFilename>
     <multiplayer supported="true" />
 
     <storeItems>
