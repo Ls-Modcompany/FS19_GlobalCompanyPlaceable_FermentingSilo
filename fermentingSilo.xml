@@ -35,7 +35,7 @@
             <operation updateDelayMinutes="10" showInGlobalGUI="true" showInTablet="true" canPurchaseInputs="true"/>
 			
             <registerLoadingTriggers>
-				<loadingTrigger name="LoadingTrigger" triggerNode="loadingTrigger" fillLitersPerSecond="500" autoStart="true">
+				<loadingTrigger name="LoadingTrigger" triggerNode="loadingTrigger" fillLitersPerSecond="1000" autoStart="true">
 					<dischargeInfo dischargeNode="dischargeNode" />
 					<sounds fillSoundIdentifier="fillSound01" />
 					
