@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="42">
+<modDesc descVersion="44">
     <author>LsModcompany / Kastor - kevink98 - Eribus</author>
     <version>1.0.0.0</version>
     <title>
-        <en><![CDATA[Fermentingsilo]]></en>
-        <de><![CDATA[Hochsilo]]></de>
+        <en><![CDATA[GlobalCompany - Fermentingsilo]]></en>
+        <de><![CDATA[GlobalCompany - Hochsilo]]></de>
     </title>
     <description>
         <en><![CDATA[In fermentingsilo you can produce silage.
