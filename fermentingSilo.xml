@@ -30,9 +30,9 @@
 
     <productionFactories>
         <productionFactory indexName="FERMENTER" saveId="globalCompany_fermenter">
-            <guiInformation title="GlobalCompanyPlaceable_FermentingSilo_FactoryName" imageFilename="store_fermentingSilo.dds" description="GlobalCompanyPlaceable_FermentingSilo_Description"/>
+            <guiInformation title="GlobalCompanyPlaceable_FermentingSilo_FactoryName" imageFilename="store_fermentingSilo.dds" description="GlobalCompanyPlaceable_FermentingSilo_Description" cameraFeed="gui_camera"/>
 			
-            <operation updateDelayMinutes="10" showInGlobalGUI="true" showInTablet="true" canPurchaseInputs="true"/>
+            <operation updateDelayMinutes="10" showInGlobalGUI="true" />
 			
             <registerLoadingTriggers>
 				<loadingTrigger name="LoadingTrigger" triggerNode="loadingTrigger" fillLitersPerSecond="1000" autoStart="true">
@@ -41,14 +41,6 @@
 					
 					<effectNode effectNode="grain" materialType="unloading" materialTypeId="3" fadeTime="0.5" />
 					<effectNode effectNode="smoke" materialType="smoke"    materialTypeId="1" fadeTime="0.5" />
-
-					<triggerStatus>
-						<!--fallOffShader node="mapTargetMarker" >
-							<noObject isActive="true" />
-							<foundObject isActive="true" />
-							<fillingActive isActive="false" />
-						</fallOffShader-->
-					</triggerStatus>
 				</loadingTrigger>
 			</registerLoadingTriggers>
 			
@@ -62,14 +54,21 @@
                         <fillType name="chaff" />
                         <fillType name="grass_windrow" />
                     </fillTypes>
+					
+					<purchase useSellPointPrice="chaff" /> <!-- Use the highest sell point price for chaff +10%-->
+					
                     <inputMethods>
                         <unloadingTrigger name="UnloadingTrigger_1" />
                     </inputMethods>	
+					
+					
 					<movers>
 						<mover node="plane">
 							<translation minimum="-4.16599989 -0.82107896 -2.4690001" maximum="-4.16599989 0.45186058 -2.4690001" />
 						</mover>
-					</movers>		
+					</movers>	
+
+					
 					<digitalDisplays>
 						<display displayType="LEVEL" numbers="IN_Display" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
 					</digitalDisplays>
@@ -88,14 +87,14 @@
             </registerOutputProducts>	
 
             <productLines>
-                <productLine autoLineStart="true" outputPerHour="3000" title="GlobalCompanyPlaceable_FermentingSilo_shopItem_fermentingSiloSmall">
+                <productLine autoLineStart="true" outputPerHour="3000" title="GlobalCompanyPlaceable_FermentingSilo_shopItem_fermentingSiloSmall" showInGUI="true">
                     <inputs>
                         <inputProduct name="IP_CHAFFGRASS" />
                     </inputs>
                     <outputs>
                         <outputProduct name="OP_SILAGE" />
                     </outputs>
-                    <playerTrigger playerTriggerNode="playerTrigger" drawUI="false"/> 
+                    <playerTrigger playerTriggerNode="playerTrigger" showPopupUI="true"/> 
 	            </productLine>
             </productLines>            			
         
@@ -109,6 +108,7 @@
                 <i3dMapping id="plane" node="0|2" />
                 <i3dMapping id="OP_Display" node="1|1" />
                 <i3dMapping id="playerTrigger" node="2" />
+				<i3dMapping id="gui_camera" node="6"/>
             </i3dMappings>
         </productionFactory>
     </productionFactories>
