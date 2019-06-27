@@ -55,7 +55,7 @@
                         <fillType name="grass_windrow" />
                     </fillTypes>
 					
-					<purchase useSellPointPrice="chaff" /> <!-- Use the highest sell point price for chaff +10%-->
+					<purchase useSellPointPrice="silage" purchaseMultiplier="1.0"/> <!-- Use the highest sell point price for silage with no multiplier. Seems fair :-)-->
 					
                     <inputMethods>
                         <unloadingTrigger name="UnloadingTrigger_1" />
