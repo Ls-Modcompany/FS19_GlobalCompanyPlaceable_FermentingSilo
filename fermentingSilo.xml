@@ -76,7 +76,7 @@
             </registerInputProducts>
 
             <registerOutputProducts headerTitle="GlobalCompanyPlaceable_FermentingSilo_HeaderOutput">				
-                <outputProduct name="OP_SILAGE" fillType="silage" capacity="100000" title="GlobalCompanyPlaceable_FermentingSilo_Output1">
+                <outputProduct name="OP_SILAGE" fillType="silage" capacity="100000">
                     <outputMethods>
 						<loadingTrigger name="LoadingTrigger" />
 					</outputMethods>
