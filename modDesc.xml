@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="44">
     <author>LsModcompany / Kastor - kevink98 - Eribus</author>
-    <version>1.0.0.0</version>
+    <version>1.1.0.0</version>
     <title>
         <en>GlobalCompany - Fermenting Silo</en>
         <de>GlobalCompany - Hochsilo</de>
@@ -14,7 +14,11 @@ Production / Hour: 3.000 Liter
 Required Inputs: Grass, Chaff
 Output: Silage
 
-Information: Mod only playable in combination with GlobalCompany!]]></en>
+Information: Mod only playable in combination with GlobalCompany!
+
+
+Changelog 1.1.0.0:
+- Add sound]]></en>
         <de><![CDATA[In Hochsilos kann Silage hergestellt werden.
 
 Produktion / Stunde: 3.000 Liter
@@ -22,7 +26,11 @@ Produktion / Stunde: 3.000 Liter
 Benötigte Rohstoffe: Gras, Häckselgut
 Produkt: Silage
 
-Information: Mod nur in Verbindung mit GlobalCompany spielbar!]]></de>
+Information: Mod nur in Verbindung mit GlobalCompany spielbar!
+
+
+Changelog 1.1.0.0:
+- Sound hinzugefügt]]></de>
     </description>
     <iconFilename>store_Fermenter.dds</iconFilename>
     <multiplayer supported="true" />

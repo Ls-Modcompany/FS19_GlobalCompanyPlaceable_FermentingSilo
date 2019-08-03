@@ -94,7 +94,12 @@
                     <outputs>
                         <outputProduct name="OP_SILAGE" />
                     </outputs>
-                    <playerTrigger playerTriggerNode="playerTrigger" showPopupUI="true"/> 
+                    <playerTrigger playerTriggerNode="playerTrigger" showPopupUI="true"/>                     			
+					<operatingParts>						
+						<sounds>
+							<sound geSoundNode="audio"/>
+						</sounds>
+					</operatingParts>
 	            </productLine>
             </productLines>            			
         
@@ -109,6 +114,7 @@
                 <i3dMapping id="OP_Display" node="1|1" />
                 <i3dMapping id="playerTrigger" node="2" />
 				<i3dMapping id="gui_camera" node="6"/>
+                <i3dMapping id="audio" node="7" />
             </i3dMappings>
         </productionFactory>
     </productionFactories>
