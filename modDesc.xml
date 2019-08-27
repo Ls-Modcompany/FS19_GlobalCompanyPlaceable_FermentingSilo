@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="44">
     <author>LsModcompany / Kastor - kevink98 - Eribus</author>
-    <version>1.1.0.0</version>
+    <version>1.0.1.0</version>
     <title>
         <en>GlobalCompany - Fermenting Silo</en>
         <de>GlobalCompany - Hochsilo</de>
+		<fr>GlobalCompany - Fermenteur</fr>
     </title>
     <description>
         <en><![CDATA[With this Fermenting silo you can easily produce Silage.
@@ -16,9 +17,10 @@ Output: Silage
 
 Information: Mod only playable in combination with GlobalCompany!
 
-
-Changelog 1.1.0.0:
-- Add sound]]></en>
+Changelog 1.0.1.0:
+- Add sound
+- Trigger adjusted
+- Add language france]]></en>
         <de><![CDATA[In Hochsilos kann Silage hergestellt werden.
 
 Produktion / Stunde: 3.000 Liter
@@ -28,9 +30,23 @@ Produkt: Silage
 
 Information: Mod nur in Verbindung mit GlobalCompany spielbar!
 
+Changelog 1.0.1.0:
+- Sound hinzugefügt
+- Trigger angepasst
+- Sprache Französich hinzugefügt]]></de>
+        <fr><![CDATA[Vous pourrez facilement produire de l'ensilage avec ce fermenteur.
 
-Changelog 1.1.0.0:
-- Sound hinzugefügt]]></de>
+Production/heure : 3 000 litres
+
+Entrée : Herbe ou paille hachée
+Sortie : Ensilage
+
+Information : Ce mod requiert le mod GlobalCompany pour fonctionner !
+
+Changelog 1.0.1.0 :
+- Ajouter du son
+- Réglage de la gâchette
+- Ajouter langue france]]></fr>
     </description>
     <iconFilename>store_Fermenter.dds</iconFilename>
     <multiplayer supported="true" />
@@ -51,5 +67,5 @@ Changelog 1.1.0.0:
 		<sourceFile filename="GC_Checker.lua" />
     </extraSourceFiles>
 	
-	<globalCompany minimumVersion="1.0.0.0" />
+	<globalCompany minimumVersion="1.1.0.0" />
 </modDesc>

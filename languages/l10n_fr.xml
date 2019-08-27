@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+    <elements>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_function_gcFermentingSilo" v="Apportez de l'herbe ou de la paille hachée dans ce fermenteur pour produire facilement de l'ensilage."/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_shopItem_fermentingSiloSmall" v="Fermenteur"/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_FactoryName" v="Fermenteur"/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_Description" v="Ce fermenteur sert à produire de l'ensilage."/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_HeaderInput" v="Entrée"/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_Input1" v="Produits en vrac"/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_HeaderOutput" v="Sortie"/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_Output1" v="Ensilage"/>
+    </elements>
+</l10n>
