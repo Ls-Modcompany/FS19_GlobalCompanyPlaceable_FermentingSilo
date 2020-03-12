@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<l10n>
+    <elements>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_function_gcFermentingSilo" v="通过在发酵筒仓中添加糠或草,您可以轻松地生产青贮饲料."/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_shopItem_fermentingSiloSmall" v="发酵筒仓"/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_FactoryName" v="发酵筒仓"/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_Description" v="这个发酵筒仓将生产青贮饲料."/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_HeaderInput" v="输入"/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_Input1" v="散装料"/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_HeaderOutput" v="输出"/>
+    <e k="GlobalCompanyPlaceable_FermentingSilo_Output1" v="青贮饲料"/>
+    </elements>
+</l10n>

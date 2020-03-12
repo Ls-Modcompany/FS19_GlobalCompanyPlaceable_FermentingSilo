@@ -100,6 +100,12 @@
 							<sound geSoundNode="audio"/>
 						</sounds>
 					</operatingParts>
+                    <!--seasons>
+                        <spring outputPerHour="0" />
+                        <summer outputPerHour="2000" />
+                        <autumn outputPerHour="4000" />
+                        <winter outputPerHour="3000" />
+                    </seasons-->
 	            </productLine>
             </productLines>            			
         
